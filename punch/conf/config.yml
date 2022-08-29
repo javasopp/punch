@@ -1,0 +1,11 @@
+mysql:
+  host: 127.0.0.1
+  port: 3307
+  username: root
+  password: 30wish10b#
+
+redis:
+  host: 127.0.0.1
+  port: 6380
+  password: 30wish10b#
+  database: 0
