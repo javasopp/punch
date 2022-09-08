@@ -1,8 +1,12 @@
+server:
+  port: 8081
+
 mysql:
   host: 127.0.0.1
   port: 3307
   username: root
   password: 30wish10b#
+  database: punch
 
 redis:
   host: 127.0.0.1

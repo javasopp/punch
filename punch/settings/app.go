@@ -1,18 +1,24 @@
 package settings
 
 type AppConfig struct {
-	Mysql MysqlConfig
-	Redis RedisConfig
+	Server *server
+	Mysql  *mysql
+	Redis  *redis
 }
 
-type MysqlConfig struct {
+type server struct {
+	Port int `yaml:"port"`
+}
+
+type mysql struct {
 	Host     string `yaml:"host"`
 	Port     int    `yaml:"port"`
 	Username string `yaml:"username"`
 	Password string `yaml:"password"`
+	Database string `yaml:"database"`
 }
 
-type RedisConfig struct {
+type redis struct {
 	Host     string `yaml:"host"`
 	Port     int    `yaml:"port"`
 	Password string `yaml:"password"`
