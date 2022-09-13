@@ -4,6 +4,7 @@ type AppConfig struct {
 	Server *server
 	Mysql  *mysql
 	Redis  *redis
+	Jwt    *jwt
 }
 
 type server struct {
@@ -23,4 +24,8 @@ type redis struct {
 	Port     int    `yaml:"port"`
 	Password string `yaml:"password"`
 	Database int    `yaml:"database"`
+}
+
+type jwt struct {
+	Key string `yaml:"key"`
 }
